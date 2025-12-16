@@ -1,4 +1,4 @@
-# Tên của quy trình CI/CD
+  # Tên của quy trình CI/CD
 name: Deploy TrangCaNhan WebFE via FTP
 
 on:
@@ -28,4 +28,4 @@ jobs:
         local-dir: ./ 
 
         # Thư mục đích chính xác trên host
-        server-dir: /www.Nghia2k4.somee.com/PhamHuuNghia/
+        server-dir: /www.Nghia2k4.somee.com/
