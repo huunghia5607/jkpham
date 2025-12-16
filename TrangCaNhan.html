@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card - Nghia2k4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/styleCN/style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card__img">
+            <img src="images/2004.jpg" alt="Avatar">
+        </div>
+        <h2>NGHIA2K4</h2>
+       
+        <div class="card__social">
+            <a target="_blank" href="https://www.facebook.com/your-profile">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/your-profile">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a target="_blank" href="https://www.youtube.com/your-channel">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a target="_blank" href="https://github.com/your-username">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <button>
+            <a href="mailto:your-email@example.com" style="text-decoration: none; background-color: aqua;">Contact me</a>
+        </button>
+    </div>
+
+    <div class="menu-container">
+        <div class="dropdown">
+            <button class="dropdown-btn">ASSgvcehidbhe<i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+                <a href="/Tuan1.html">Bài tập tuần 1</a>
+
+                <a href="/Lab02/Vi_du_Lab01/lab02_khung_table.html">Bài tập tuần 2</a>
+
+                <a href="tuan3.html">Bài tập tuần 3</a>
+                <a href="/Lab01/Vi_du/lab01_bai1-2-3.html">Bài tập tuần 3</a>
+                
+                <a href="/Lab02/Vi_du_Lab01/lab02_khung_table.html">Bài tập tuần 4</a>
+                <a href="/Lab01/Vi_du/lab01_bai1-2-3.html">Bài tập tuần 5</a>
+                
+                <a href="/Lab02/Vi_du_Lab01/lab02_khung_table.html">Bài tập tuần 6</a>
+                <a href="/Lab01/Vi_du/lab01_bai1-2-3.html">Bài tập tuần 7</a>
+                <a href="/Lab01/Vi_du/lab01_bai1-2-3.html">Bài tập tuần 8</a>
+                <a href="/Lab01/Vi_du/lab01_bai1-2-3.html">Bài tập tuần 9</a>
+                <a href="/Lab01/Vi_du/lab01_bai1-2-3.html">Bài tập tuần 10</a>
+
+                
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-btn">Đồ án <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+                <a href="/PhamHuuNghia/Web_BanDoCongNghe/index.html">Web_BanDoCongNghe</a>
+            </div>
+        </div>
+    </div>
+    <!-- Script để ẩn quảng cáo và xử lý dropdown -->
+    <script type="text/javascript">
+        window.onload = function() {
+            var ad = document.getElementById('MainPage');
+            if (ad) ad.style.display = 'none';
+
+            // Toggle dropdown menu với hiệu ứng xoay mũi tên
+            document.querySelectorAll('.dropdown-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    var dropdownContent = this.nextElementSibling;
+                    var icon = this.querySelector('i');
+
+                    // Đóng các menu khác trước khi mở menu hiện tại
+                    document.querySelectorAll('.dropdown-content').forEach(content => {
+                        if (content !== dropdownContent) {
+                            content.classList.remove('show');
+                            content.parentElement.querySelector('i').classList.remove('rotate');
+                        }
+                    });
+
+                    // Toggle menu hiện tại
+                    dropdownContent.classList.toggle('show');
+                    icon.classList.toggle('rotate');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
